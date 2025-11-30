@@ -1,0 +1,58 @@
+POST http://localhost:9090/register HTTP/1.1
+Content-Type: application/json
+
+{
+    "username":"bipul123",
+    "password":"bipul123@",
+    "email": "bipul123@gmail.com",
+    "name":"bipul"
+}
+
+###
+
+POST http://localhost:9090/login HTTP/1.1
+Content-Type: application/json
+
+{
+   "email": "shreya123@gmail.com",
+     "password":"shreya"
+}
+
+###
+
+GET  http://localhost:9090/get_user_and_profile HTTP/1.1
+Content-Type: application/json
+
+{
+  "token" :"71b17f1dda3344bd63b5d3b217b3234f57e15a1130a24a37ff4b82d6dcc8854c"
+}
+
+###
+
+POST  http://localhost:9090/update_profile_data
+Content-Type: application/json
+
+{
+  "token" :"b959f1a9c18713222b897c501f5613ffe985de207bc8a0d918f28032234522d0",
+  "bio":"Hii, I am Shreya(Aink) Pandey . I have strong attitude problem and i am vey usetoo",
+  "currentPost": "Manager",
+  "pastWork": [
+    {
+      "company" : "Microsoft",
+      "position" :"C10",
+      "year" :"2+"
+    }
+  ],
+  "education": [
+    {
+      "school":"IIM",
+      "degree" :"B-Tech",
+      "fieldOfStudy" :"2023-2027"
+    }
+  ]
+}
+
+###
+
+GET  http://localhost:9090/user/get_all_users
+Content-Type: application/json
